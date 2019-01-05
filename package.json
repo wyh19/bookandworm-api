@@ -1,0 +1,20 @@
+{
+  "name": "bookandworm-api",
+  "version": "1.0.0",
+  "description": "书与书虫的后端API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyh19/bookandworm-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyh19/bookandworm-api/issues"
+  },
+  "homepage": "https://github.com/wyh19/bookandworm-api#readme"
+}
