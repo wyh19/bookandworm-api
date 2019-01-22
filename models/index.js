@@ -2,15 +2,10 @@ const mongoose = require('mongoose')
 const DB_url = 'mongodb://localhost:27017/bookandworm'
 mongoose.connect(DB_url,{ useNewUrlParser: true })
 
+const userModel = require('./user')
+
 const models = {
-    user: {
-        name: { type: String, require: true },
-        pwd: { type: String, require: true },
-        avatar:{type:String},
-        nickName:{type:String},
-        age:{type:Number},
-        gender:{type:Number}
-    }
+    user: userModel
 }
 
 for(let m in models){
