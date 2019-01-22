@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const DB_url = 'mongodb://localhost:27017/bookandworm'
-mongoose.connect(DB_url)
+mongoose.connect(DB_url,{ useNewUrlParser: true })
 
 const models = {
     user: {
