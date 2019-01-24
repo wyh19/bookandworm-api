@@ -15,9 +15,33 @@ Router.get('/list', (req, res) => {
 })
 
 
-Router.post('/create',(req,res) => {
-    const {name,pwd} = req.body
-    
+Router.post('/create', (req, res) => {
+    const { name, pwd } = req.body
+    User.findOne({ name }, (err, doc) => {
+        if (doc) {
+            return res.json({ code: 1, msg: '用户名重复' })
+        }
+        const userModel = new User({name,pwd:md5Pwd(pwd)})
+        userModel.save((err,doc)=>{
+            if(err){
+                return res.json({code:1,msg:'数据库出错了'})
+            }
+            return res.json({code:0,data:doc})
+        })
+    })
 })
+
+
+
+/**
+ * md5加密
+ * @param {String} pwd 
+ * @returns {String} 加密后的密码
+ * @private
+ */
+function md5Pwd(pwd){
+    const salt = 'wyh_love_nodejs_2019_kjsanfkshfuabsiu_salt'
+    return utiltty.md5(utiltty.md5(pwd+salt))
+}
 
 module.exports = Router
