@@ -12,7 +12,9 @@ Router.get('/list', (req, res) => {
     })
 })
 
-
+/**
+ * 创建用户
+ */
 Router.post('/create', (req, res) => {
     const { name, pwd } = req.body
     User.findOne({ name }, (err, doc) => {
