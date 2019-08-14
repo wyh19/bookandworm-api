@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,11 @@
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
+    "express-session": "^1.16.2",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.4.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
     "utility": "^1.15.0"
   }
 }
